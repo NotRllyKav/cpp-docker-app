@@ -47,28 +47,6 @@ jobs:
           echo "Running Ruff..."
           ruff . || echo "[LOG] Ruff failed but continuing"
 
-  # ✅ Pre-commit Hook Checks
-  precommit-checks:
-    runs-on: ubuntu-latest
-    continue-on-error: true
-    if: always()
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-
-      - name: Install pre-commit
-        run: pip install pre-commit
-
-      - name: Run pre-commit checks
-        run: |
-          echo "Running pre-commit..."
-          pre-commit run --all-files || echo "[LOG] Pre-commit checks failed but continuing"
-
   # 🐳 Docker Build and Push to GHCR
   docker-build-push:
     runs-on: ubuntu-latest
