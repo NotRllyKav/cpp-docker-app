@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cpp-demo-deployment
+  namespace: cpp-demo        
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cpp-demo
+  template:
+    metadata:
+      labels:
+        app: cpp-demo
+    spec:
+      containers:
+      - name: cpp-demo
+        image: ghcr.io/notrllykav/cpp-docker-app:latest
+        imagePullPolicy: Always
+        tty: true
+        stdin: true
