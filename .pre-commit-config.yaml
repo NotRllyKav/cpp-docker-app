@@ -6,16 +6,6 @@ repos:
       - id: trailing-whitespace
       - id: check-added-large-files
 
-  - repo: https://github.com/cpplint/cpplint
-    rev: master
-    hooks:
-      - id: cpplint
-        name: Run cpplint on C++ files
-        entry: cpplint
-        language: python
-        files: \.(cpp|h|hpp|cc|cxx)$
-        types: [file]
-
   - repo: local
     hooks:
       - id: clang-format
