@@ -80,7 +80,7 @@ jobs:
           tags: ghcr.io/notrllykav/cpp-docker-app:latest
           provenance: false
 
-  # 📧 Email Notification (always runs)
+  # 📧 Email Notification (always runs) --
   notify-email:
     runs-on: ubuntu-latest
     if: always()
