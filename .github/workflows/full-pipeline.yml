@@ -96,10 +96,15 @@ jobs:
           subject: "CI Result - ${{ github.repository }} - ${{ job.status }}"
           to: kavinda.karun@gmail.com
           from: CI Bot <${{ secrets.EMAIL_USERNAME }}>
-          content_type: text/html
+          content_type: text/plain
           body: |
-            <h3>Build Result: <strong>${{ job.status }}</strong></h3>
-            <p><strong>Repo:</strong> ${{ github.repository }}</p>
-            <p><strong>Branch:</strong> ${{ github.ref_name }}</p>
-            <p><strong>Commit:</strong> <code>${{ github.sha }}</code></p>
-            <p><a href="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}">View Workflow</a></p>
+            ✅ GitHub CI Summary
+      
+            • Result: ${{ job.status }}
+            • Repo: ${{ github.repository }}
+            • Branch: ${{ github.ref_name }}
+            • Commit: ${{ github.sha }}
+      
+            🔗 View full workflow run:
+            https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+    
