@@ -94,8 +94,8 @@ jobs:
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: "CI Result - ${{ github.repository }} - ${{ job.status }}"
-          to: kavinda.karun@gmail.com
-          from: CI Bot <${{ secrets.EMAIL_USERNAME }}>
+          to: kevinduh7098@gmail.com
+          from: CI Bot 
           content_type: text/plain
           body: |
             ✅ GitHub CI Summary
