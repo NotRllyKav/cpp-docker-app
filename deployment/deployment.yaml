@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cpp-demo-deployment
-  namespace: cpp-demo        
+  namespace: cpp-demo
 spec:
   replicas: 1
   selector:
