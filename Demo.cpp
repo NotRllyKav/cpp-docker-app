@@ -18,7 +18,7 @@ public:
     }
 
     ~Player() {
-        delete score; // free memory another test -- another test
+        delete score; // free memory another test -- another test -- small change
         cout << "[LOG] Player object destroyed: " << name << endl;
     }
 
