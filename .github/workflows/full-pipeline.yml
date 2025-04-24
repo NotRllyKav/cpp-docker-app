@@ -63,4 +63,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: ghcr.io/notrllykav/cpp-docker-app:latest
+
