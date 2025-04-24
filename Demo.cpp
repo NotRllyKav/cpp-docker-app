@@ -13,7 +13,7 @@ private:
 public:
     Player(string playerName) {
         name = playerName;
-        score = new int(0); // dynamically allocate score
+        score = new int(0); // dynamically allocate score small change
         cout << "[LOG] Player created: " << name << endl;
     }
 
